@@ -27,6 +27,10 @@
 			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
 			{{ .Content }}
+			
+			<div class="article-container">
+			{{ partial "comments.html" . }}
+			</div>
 
 			<aside class="copyright" role="note">
 				{{ with .Site.Params.copyright }}
